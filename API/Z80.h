@@ -808,6 +808,9 @@ Z80_API void z80_int(Z80 *self, zboolean state);
 
 Z80_API void z80_nmi(Z80 *self);
 
+// perform retn
+Z80_API void z80_do_retn(Z80 *self);
+
 /** @brief Runs a <tt>@ref Z80</tt> for a given number of clock @p cycles,
   * executing only instructions without responding to signals.
   *

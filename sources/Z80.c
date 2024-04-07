@@ -2193,6 +2193,10 @@ Z80_API void z80_int(Z80 *self, zboolean state)
 Z80_API void z80_nmi(Z80 *self)
 	{REQUEST |= Z80_REQUEST_NMI;}
 
+Z80_API void z80_do_retn(Z80 *self)
+{
+    retn(self);
+}
 
 #ifdef Z80_WITH_EXECUTE
 	Z80_API zusize z80_execute(Z80 *self, zusize cycles)
